@@ -1,0 +1,72 @@
+{
+"component_sources": {
+
+    "library_promoter_1" : {
+        "name": "promoter1",
+        "type": "promoter",
+        "repository": "simple_example",
+        "parts": [{"name": "J23101", "filetype": "genbank", "filename": "BBa_J23101.gb"}]
+    },
+
+    "library_rbs_1" : {
+        "name": "RBS-1",
+        "type": "rbs",
+        "repository": "simple_example",
+        "parts": [
+            {"name": "B0030", "filetype": "genbank", "filename": "BBa_B0030.gb"},
+            {"name": "B0031", "filetype": "genbank", "filename": "BBa_B0031.gb"},
+            {"name": "B0032", "filetype": "genbank", "filename": "BBa_B0032.gb"},
+            {"name": "B0033", "filetype": "genbank", "filename": "BBa_B0033.gb"},
+            {"name": "B0064", "filetype": "genbank", "filename": "BBa_B0064.gb"}
+        ]
+    },
+    "library_cds_1" : {
+        "name": "VioA",
+        "type": "cds",
+        "repository": "simple_example",
+        "parts": [
+            {"name": "VioA", "filetype": "genbank", "filename": "VioA_BASIC_fragment.gb"}
+        ]
+    },
+    "library_terminator_1" : {
+        "name": "term1",
+        "type": "terminator",
+        "repository": "simple_example",
+        "parts": [
+            {"name": "B0015", "filetype": "genbank", "filename": "BBa_B0015.gb"}
+        ]
+    }
+},
+
+"template": {
+    "name": "ViolaceinA",
+    "UID": "Violacein A",
+    "description": "Violacein A",
+    "structure": [
+        {
+            "type": "promoter",
+            "library_source": "library_promoter_1",
+            "template_position": 1
+        },
+        {
+            "type": "rbs",
+            "library_source": "library_rbs_1",
+            "template_position": 2
+        },
+        {
+            "type": "cds",
+            "library_source": "library_cds_1",
+            "template_position": 3
+        },
+        {
+            "type": "terminator",
+            "library_source": "library_terminator_1",
+            "template_position": 4
+        }
+    ]
+},
+
+"template_slices": [
+    { "name" : "construct", "template_slice":[1, 2, 3, 4] }
+]
+}
