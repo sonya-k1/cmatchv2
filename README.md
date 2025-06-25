@@ -34,8 +34,9 @@ run cmatch.py
 ```
 
 ## Streamlit integration for visualisation
-
+```
 streamlit run cmatch.py [template file] [Output File path for results ending in '.parquet' :str ] [match_results path : str][direction ('forward' or 'reverse'): str] [similarity threshold: float (0-1)] [overlap_tolerance: int (bases)] [sequence files (.seq or .fasta/.fastq)]
+```
 
 # Notes
 
