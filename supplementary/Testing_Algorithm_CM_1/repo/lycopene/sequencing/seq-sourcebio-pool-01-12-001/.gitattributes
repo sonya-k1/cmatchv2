@@ -1,2 +1,0 @@
-*.ab1 filter=lfs diff=lfs merge=lfs -text
-*.seq filter=lfs diff=lfs merge=lfs -text
